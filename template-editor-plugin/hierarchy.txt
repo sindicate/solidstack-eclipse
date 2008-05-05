@@ -1,0 +1,37 @@
+TemplateEditor
+	extends org.eclipse.ui.editors.text.TextEditor
+		field: DefaultEncodingSupport
+		extends org.eclipse.ui.editors.text.AbstractDecoratedTextEditor
+			field: SourceViewerDecorationSupport
+				field: ISourceViewer
+					SourceViewer
+						field: IContentAssistant
+						field: IContentFormatter
+						field: IReconciler
+						field: IPresentationReconciler
+						extends TextViewer
+							field: IDocument
+							field: VisibleDocumentListener
+							field: PaintManager
+							field: fPartitioning
+							field: fTextPresentationListeners
+							extends Viewer
+								na
+				field: ISharedTextColors
+				field: CursorLinePainter
+				field: IPreferenceStore
+			field: IDocumentProvider
+			extends StatusTextEditor
+				field: parent
+				field: StackLayout
+				field: rootCompositie
+				field: statusControl
+				extends AbstractTextEditor
+					field: InformationPresenter
+					field: SourceViewerConfiguration
+						TextSourceViewerConfiguration has a IPreferenceStore
+					field: ISourceViewer
+					extends EditorPart
+						field: IEditorInput
+						extends WorkbenchPart
+	
