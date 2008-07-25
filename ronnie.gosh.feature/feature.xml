@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="ronnie.gosh.feature"
-      label="GoSH Feature"
-      version="1.0.0">
+      id="ronnie.gosh"
+      label="GoSH Support"
+      version="1.0.2"
+      provider-name="René de Bloois">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/ronnie.gosh.feature_1.0.0.jar" id="ronnie.gosh.feature" version="1.0.0"/>
+   <feature url="features/ronnie.gosh_1.0.2.jar" id="ronnie.gosh" version="1.0.2">
+      <category name="gosh.support"/>
+   </feature>
+   <category-def name="gosh.support" label="GoSH Support"/>
 </site>
