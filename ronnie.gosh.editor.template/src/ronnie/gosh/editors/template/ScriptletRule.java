@@ -14,7 +14,6 @@ public class ScriptletRule implements IPredicateRule
 		this.successToken = successToken;
 	}
 
-	@Override
 	public IToken evaluate( ICharacterScanner scanner, boolean resume )
 	{
 		/* Example of blocking a resume. The partition scanner will then start normal scan.
@@ -24,7 +23,6 @@ public class ScriptletRule implements IPredicateRule
 		return evaluate( scanner );
 	}
 
-	@Override
 	public IToken getSuccessToken()
 	{
 		return this.successToken;
@@ -48,7 +46,6 @@ public class ScriptletRule implements IPredicateRule
 		return true;
 	}
 
-	@Override
 	public IToken evaluate( ICharacterScanner scanner )
 	{
 		if( !startDetected( scanner ) )

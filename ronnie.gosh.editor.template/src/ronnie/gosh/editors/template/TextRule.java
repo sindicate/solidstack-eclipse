@@ -14,7 +14,6 @@ public class TextRule implements IPredicateRule
 		this.successToken = successToken;
 	}
 
-	@Override
 	public IToken evaluate( ICharacterScanner scanner, boolean resume )
 	{
 		/* Example of blocking resume. The partition scanner will then start normal scan.
@@ -24,13 +23,11 @@ public class TextRule implements IPredicateRule
 		return evaluate( scanner );
 	}
 
-	@Override
 	public IToken getSuccessToken()
 	{
 		return this.successToken;
 	}
 
-	@Override
 	public IToken evaluate( ICharacterScanner scanner )
 	{
 		boolean found = false;

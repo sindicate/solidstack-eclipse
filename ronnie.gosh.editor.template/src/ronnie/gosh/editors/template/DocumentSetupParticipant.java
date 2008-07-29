@@ -10,7 +10,6 @@ import org.eclipse.jface.text.rules.FastPartitioner;
 
 public class DocumentSetupParticipant implements IDocumentSetupParticipant
 {
-	@Override
 	public void setup( IDocument document )
 	{
 //		Activator.info( "DocumentSetupParticipant.setup()" );
