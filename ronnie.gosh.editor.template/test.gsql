@@ -1,0 +1,54 @@
+X"X'X
+X\\"X'X
+X\\X'X
+X"""X'X
+X\<%X
+X\${X
+
+<% Mooi he %>
+
+XXX<%="X"%>XXX
+XXX<%="%>"%>XXX
+XXX<%="${var}"%>XXX
+XXX<%="${"te\"xt"}"%>XXX
+XXX<%="${"te\${x}t"}"%>XXX
+XXX<%="${"te"xt"}">XXX						}"%>
+XXX<%="${"te\"xt"}"%>XXX
+XXX<%="Y${"Z${"text"}Z"}Y"%>XXX
+
+XXX<%='X'%>XXX
+XXX<%='%>'%>XXX
+XXX<%='${var}'%>XXX
+XXX<%="${'te${x}t'}"%>XXX
+
+XXX${var}XXX
+XXX${
+var}XXX
+XXX${"te\nxt"}XXX
+XXX${"Y\${Y"}XXX
+XXX${"te"xt"}								"}XXX
+XXX${"te\"xt"}XXX
+XXX${"text
+}XXX
+XXX${"${"text
+}XXX
+XXX${"""te"xt
+text\""""}XXX
+XXX${if(var){"true"}else{"false"}}XXX
+XXX${"Y${
+}XXX
+XXX${"""Y${
+var
+}Y"""}XXX
+
+XXX${'text'}XXX
+XXX${'Y${Y'}XXX
+XXX${'te'xt'}								'}XXX
+XXX${'te"xt'}XXX
+XXX${'text
+text}XXX
+XXX${'''te"xt
+text\''''}XXX
+
+XXX$var XXX
+XXX$$ XXX
