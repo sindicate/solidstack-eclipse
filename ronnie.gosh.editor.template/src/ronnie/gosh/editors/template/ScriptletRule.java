@@ -54,10 +54,8 @@ public class ScriptletRule implements IPredicateRule
 		int c = scanner.read();
 		while( c != ICharacterScanner.EOF )
 		{
-			if( c == '"' )
-				readGString( scanner );
-			else if( c == '\'' )
-				readString( scanner );
+			if( c == '"' || c == '\'' )
+				Parser.readString( scanner, c );
 			else if( c == '%' )
 			{
 				c = scanner.read();
@@ -68,50 +66,5 @@ public class ScriptletRule implements IPredicateRule
 			c = scanner.read();
 		}
 		return this.successToken;
-	}
-
-	protected void readGString( ICharacterScanner scanner )
-	{
-		int c = scanner.read();
-		while( c != '"' && c != ICharacterScanner.EOF )
-		{
-			// TODO GString expression, but keep synchronized
-			if( c == '\\' )
-				scanner.read();
-			else if( c == '$' )
-			{
-				c = scanner.read();
-				if( c == '{' )
-					readEuh( scanner );
-				else
-					scanner.unread();
-			}
-			c = scanner.read();
-		}
-	}
-
-	protected void readString( ICharacterScanner scanner )
-	{
-		int c = scanner.read();
-		while( c != '\'' && c != ICharacterScanner.EOF )
-		{
-			if( c == '\\' )
-				scanner.read();
-			c = scanner.read();
-		}
-	}
-	
-	// TODO Also read simple values like $value ?
-	protected void readEuh( ICharacterScanner scanner )
-	{
-		int c = scanner.read();
-		while( c != '}' && c != ICharacterScanner.EOF )
-		{
-			if( c == '"' )
-				readGString( scanner );
-			else if( c == '\'' )
-				readString( scanner );
-			c = scanner.read();
-		}
 	}
 }

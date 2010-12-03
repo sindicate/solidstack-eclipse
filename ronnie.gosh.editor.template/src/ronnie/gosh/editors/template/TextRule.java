@@ -37,7 +37,7 @@ public class TextRule implements IPredicateRule
 			if( c == '\\' )
 			{
 				c = scanner.read();
-				if( c != '$' )
+				if( c != '$' && c != '<' && c != '\\' )
 					scanner.unread();
 			}
 			else if( c == '<' )
@@ -51,7 +51,7 @@ public class TextRule implements IPredicateRule
 			{
 				c = scanner.read();
 				scanner.unread();
-				if( c == '{' || c == '[' || Character.isJavaIdentifierStart( c ) )
+				if( c == '{' || c == '[' || Character.isJavaIdentifierStart( c ) && c != '$' )
 					break;
 			}
 			found = true;

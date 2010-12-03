@@ -1,6 +1,9 @@
 package ronnie.gosh.editors.template;
 
-import org.eclipse.jface.text.*;
+import org.eclipse.jface.text.BadLocationException;
+import org.eclipse.jface.text.IDocument;
+import org.eclipse.jface.text.ITextDoubleClickStrategy;
+import org.eclipse.jface.text.ITextViewer;
 
 
 public class DoubleClickStrategy implements ITextDoubleClickStrategy
@@ -89,7 +92,7 @@ public class DoubleClickStrategy implements ITextDoubleClickStrategy
 			while( pos >= 0 )
 			{
 				c = doc.getChar( pos );
-				if( !Character.isJavaIdentifierPart( c ) )
+				if( !Character.isJavaIdentifierPart( c ) || c == '$' )
 					break;
 				--pos;
 			}
@@ -102,7 +105,7 @@ public class DoubleClickStrategy implements ITextDoubleClickStrategy
 			while( pos < length )
 			{
 				c = doc.getChar( pos );
-				if( !Character.isJavaIdentifierPart( c ) )
+				if( !Character.isJavaIdentifierPart( c ) || c == '$' )
 					break;
 				++pos;
 			}

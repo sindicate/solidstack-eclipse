@@ -19,7 +19,7 @@ public class GStringExpressionRule extends ScriptletRule
 		{
 			c = scanner.read();
 			scanner.unread();
-			if( c == '{' || Character.isJavaIdentifierStart( c ) )
+			if( c == '{' || Character.isJavaIdentifierStart( c ) && c != '$' )
 				return true;
 		}
 		scanner.unread();
@@ -35,31 +35,18 @@ public class GStringExpressionRule extends ScriptletRule
 		int c = scanner.read();
 		if( c == '{' )
 		{
-			c = scanner.read();
-			while( c != ICharacterScanner.EOF )
-			{
-				if( c == '"' )
-					readGString( scanner );
-				else if( c == '\'' )
-					readString( scanner );
-				else if( c == '}' )
-					break;
-				c = scanner.read();
-			}
-			return this.successToken;
+			Parser.readGStringExpression( scanner, true );
 		}
 		else
 		{
-			if( !Character.isJavaIdentifierStart( c ) )
-				throw new RuntimeException( "Expecting a javaIdentifierStart character" );
 			while( c != ICharacterScanner.EOF )
 			{
-				if( !Character.isJavaIdentifierPart( c ) )
+				if( !Character.isJavaIdentifierPart( c ) || c == '$' )
 					break;
 				c = scanner.read();
 			}
 			scanner.unread();
-			return this.successToken;
 		}
+		return this.successToken;
 	}
 }
