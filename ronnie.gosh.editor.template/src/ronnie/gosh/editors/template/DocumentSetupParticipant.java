@@ -17,6 +17,7 @@ public class DocumentSetupParticipant implements IDocumentSetupParticipant
 		IDocumentExtension3 _document = (IDocumentExtension3)document;
 		IDocumentPartitioner partitioner = new FastPartitioner( new PartitionScanner(), new String[] {
 			PartitionScanner.COMMENT, 
+			PartitionScanner.DIRECTIVE,
 			PartitionScanner.GROOVY_EXPRESSION, 
 			PartitionScanner.GROOVY_SCRIPTLET,
 			PartitionScanner.GSTRING_EXPRESSION,

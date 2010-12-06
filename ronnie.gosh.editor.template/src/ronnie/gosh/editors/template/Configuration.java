@@ -29,7 +29,7 @@ public class Configuration extends SourceViewerConfiguration
 	{
 		return new String[] { IDocument.DEFAULT_CONTENT_TYPE, PartitionScanner.COMMENT, /* XMLPartitionScanner.XML_TAG, */
 				PartitionScanner.GROOVY_SCRIPTLET, PartitionScanner.GROOVY_EXPRESSION,
-				PartitionScanner.GSTRING_EXPRESSION };
+				PartitionScanner.GSTRING_EXPRESSION, PartitionScanner.DIRECTIVE };
 	}
 
 	@Override
@@ -53,6 +53,10 @@ public class Configuration extends SourceViewerConfiguration
 		dr = new DefaultDamagerRepairer( new DummyScanner( new Token( ColorManager.COMMENT ) ) );
 		reconciler.setDamager( dr, PartitionScanner.COMMENT );
 		reconciler.setRepairer( dr, PartitionScanner.COMMENT );
+
+		dr = new DefaultDamagerRepairer( new DummyScanner( new Token( ColorManager.DIRECTIVE ) ) );
+		reconciler.setDamager( dr, PartitionScanner.DIRECTIVE );
+		reconciler.setRepairer( dr, PartitionScanner.DIRECTIVE );
 
 		dr = new DefaultDamagerRepairer( new DummyScanner( new Token( ColorManager.GROOVY_EXPRESSION ) ) );
 		reconciler.setDamager( dr, PartitionScanner.GROOVY_EXPRESSION );

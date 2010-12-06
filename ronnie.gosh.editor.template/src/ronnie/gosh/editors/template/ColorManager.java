@@ -17,6 +17,7 @@ public class ColorManager
 
 	static public final TextAttribute COMMENT = new TextAttribute( ColorManager.getColor( new RGB( 128, 128, 128 ) ), null, SWT.NORMAL );
 	static public final TextAttribute DEFAULT = new TextAttribute( null, null, SWT.NORMAL );
+	static public final TextAttribute DIRECTIVE = new TextAttribute( ColorManager.getColor( new RGB( 64, 160, 64 ) ), null, SWT.NORMAL );
 	static public final TextAttribute GROOVY_SCRIPTLET = new TextAttribute( null, ColorManager.getColor( new RGB( 250, 250, 160 ) ), SWT.NORMAL );
 	static public final TextAttribute GROOVY_EXPRESSION = new TextAttribute( ColorManager.getColor( new RGB( 196, 96, 64 ) ), null, SWT.NORMAL );
 	static public final TextAttribute GSTRING_EXPRESSION = new TextAttribute( ColorManager.getColor( new RGB( 64, 96, 255 ) ), null, SWT.NORMAL );
