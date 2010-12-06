@@ -2,7 +2,7 @@
 <feature
       id="ronnie.gosh"
       label="GoSH Support"
-      version="1.1.1"
+      version="1.1.0"
       provider-name="René de Bloois">
 
    <description url="http://www.example.com/description">
