@@ -10,17 +10,11 @@
     <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='9'>
+  <artifacts size='3'>
     <artifact classifier='osgi.bundle' id='solidstack.template.editor' version='1.2.0'>
       <properties size='2'>
         <property name='artifact.size' value='4096'/>
         <property name='download.size' value='23074'/>
-      </properties>
-    </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='ronnie.gosh' version='1.0.2'>
-      <properties size='2'>
-        <property name='artifact.size' value='726'/>
-        <property name='download.size' value='726'/>
       </properties>
     </artifact>
     <artifact classifier='org.eclipse.update.feature' id='solidstack.template' version='1.2.0'>
@@ -29,41 +23,10 @@
         <property name='download.size' value='430'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='ronnie.gosh.editors.template' version='1.0.2'>
-      <properties size='3'>
-        <property name='artifact.size' value='24571'/>
-        <property name='download.size' value='24571'/>
-        <property name='download.contentType' value='application/zip'/>
-      </properties>
-    </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='ronnie.gosh' version='1.1.0'>
-      <properties size='2'>
-        <property name='download.contentType' value='application/zip'/>
-        <property name='download.size' value='435'/>
-      </properties>
-    </artifact>
-    <artifact classifier='osgi.bundle' id='ronnie.gosh.editors.template' version='1.1.1'>
-      <properties size='2'>
-        <property name='artifact.size' value='4096'/>
-        <property name='download.size' value='23093'/>
-      </properties>
-    </artifact>
     <artifact classifier='org.eclipse.update.feature' id='solidstack' version='1.2.0'>
       <properties size='2'>
         <property name='download.contentType' value='application/zip'/>
         <property name='download.size' value='429'/>
-      </properties>
-    </artifact>
-    <artifact classifier='osgi.bundle' id='ronnie.gosh.editors.template' version='1.1.0'>
-      <properties size='2'>
-        <property name='artifact.size' value='4096'/>
-        <property name='download.size' value='22292'/>
-      </properties>
-    </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='ronnie.gosh' version='1.1.1'>
-      <properties size='2'>
-        <property name='download.contentType' value='application/zip'/>
-        <property name='download.size' value='435'/>
       </properties>
     </artifact>
   </artifacts>
