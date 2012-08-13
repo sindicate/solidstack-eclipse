@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: GoSH Template Editor
-Bundle-SymbolicName: ronnie.gosh.editors.template; singleton:=true
-Bundle-Version: 1.1.1
+Bundle-Name: Solid Template Editor
+Bundle-SymbolicName: solidstack.template.editor;singleton:=true
+Bundle-Version: 1.2.0
 Bundle-Activator: ronnie.gosh.editors.template.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.jface.text,
  org.eclipse.ui.editors
 Eclipse-LazyStart: true
-Bundle-Vendor: René M. de Bloois
+Bundle-Vendor: René de Bloois
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

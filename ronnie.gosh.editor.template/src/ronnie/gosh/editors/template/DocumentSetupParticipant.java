@@ -24,7 +24,7 @@ public class DocumentSetupParticipant implements IDocumentSetupParticipant
 			PartitionScanner.MESSAGE,
 			PartitionScanner.TEXT } );
 		partitioner.connect( document );
-		_document.setDocumentPartitioner( "groovy_template_partitioning", partitioner );
+		_document.setDocumentPartitioner( "solidstack_template_partitioning", partitioner );
 
 //		Activator.info( "DocumentSetupParticipant.setup() done" );
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="ronnie.gosh"
-      label="GoSH Support"
-      version="1.1.1"
+      label="SolidStack"
+      version="1.2.0"
       provider-name="René de Bloois">
 
    <description url="http://www.example.com/description">
@@ -18,10 +18,10 @@
    </license>
 
    <plugin
-         id="ronnie.gosh.editors.template"
+         id="solidstack.template.editor"
          download-size="0"
          install-size="0"
-         version="1.1.1"
+         version="1.2.0"
          unpack="false"/>
 
 </feature>

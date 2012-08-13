@@ -13,7 +13,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin
 {
-	static public final String PLUGIN_ID = "ronnie.gosh.editors.template"; // The plug-in ID
+	static public final String PLUGIN_ID = "solidstack.template.editor"; // The plug-in ID
 
 	static private Activator plugin; // The shared instance
 	

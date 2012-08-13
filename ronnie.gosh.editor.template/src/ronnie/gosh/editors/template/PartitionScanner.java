@@ -8,11 +8,11 @@ import org.eclipse.jface.text.rules.Token;
 public class PartitionScanner extends RuleBasedPartitionScanner
 {
 	public final static String TEXT = "__text";
-	public final static String COMMENT = "__groovy_comment";
-	public final static String DIRECTIVE = "__directive";
-	public final static String GROOVY_SCRIPTLET = "__groovy_scriptlet";
-	public final static String GROOVY_EXPRESSION = "__groovy_expression";
-	public final static String GSTRING_EXPRESSION = "__gstring_expression";
+	public final static String COMMENT = "__solidstack_template_comment";
+	public final static String DIRECTIVE = "__solidstack_template_directive";
+	public final static String GROOVY_SCRIPTLET = "__solidstack_template_scriptlet";
+	public final static String GROOVY_EXPRESSION = "__solidstack_template_expression";
+	public final static String GSTRING_EXPRESSION = "__solidstack_template_expression";
 	public final static String MESSAGE = "__message";
 
 //	@Override

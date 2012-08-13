@@ -44,7 +44,7 @@ public class Configuration extends SourceViewerConfiguration
 	public IPresentationReconciler getPresentationReconciler( ISourceViewer sourceViewer )
 	{
 		PresentationReconciler reconciler = new PresentationReconciler();
-		reconciler.setDocumentPartitioning( "groovy_template_partitioning" );
+		reconciler.setDocumentPartitioning( "solidstack_template_partitioning" );
 
 		DefaultDamagerRepairer dr = new DefaultDamagerRepairer( new DummyScanner( new Token( ColorManager.DEFAULT ) ) );
 		reconciler.setDamager( dr, PartitionScanner.TEXT );
